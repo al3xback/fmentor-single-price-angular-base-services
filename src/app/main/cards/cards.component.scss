@@ -1,0 +1,33 @@
+@use '../../../assets/scss/abstracts/variables' as var;
+@use '../../../assets/scss/abstracts/functions' as func;
+@use '../../../assets/scss/abstracts/mixins' as mix;
+
+:host {
+	@include mix.flexbox;
+	@include mix.flex-direction(column);
+	width: 100%;
+	margin: func.em(40, var.$font-size-primary) 0
+		func.em(60, var.$font-size-primary);
+	background-color: var.$color-white;
+	@include mix.border-radius(8px);
+	@include mix.box-shadow(
+		0 func.em(16, var.$font-size-primary)
+			func.em(30, var.$font-size-primary) rgba(0, 0, 0, 0.04)
+	);
+	overflow: hidden;
+}
+
+.group {
+	@include mix.flexbox;
+	@include mix.flex-direction(column);
+}
+
+@media (min-width: 48em) {
+	:host {
+		max-width: func.em(640, var.$font-size-primary);
+	}
+
+	.group {
+		@include mix.flex-direction(row);
+	}
+}

@@ -1,0 +1,33 @@
+@use '../../../../assets/scss/abstracts/variables' as var;
+@use '../../../../assets/scss/abstracts/functions' as func;
+@use '../../../../assets/scss/abstracts/mixins' as mix;
+
+:host {
+	@include mix.flexbox;
+	@include mix.flex-direction(column);
+	padding: func.em(26, var.$font-size-primary)
+		func.em(24, var.$font-size-primary);
+	background-color: var.$color-cyan-light;
+	color: var.$color-light-gray;
+}
+
+h3.title {
+	margin-bottom: func.em(18, 18);
+	color: inherit;
+}
+
+.list {
+	line-height: 1.4;
+}
+
+.list li + li {
+	margin-top: func.em(3, var.$font-size-primary);
+}
+
+@media (min-width: 48em) {
+	:host {
+		width: 50%;
+		padding: func.em(38, var.$font-size-primary)
+			func.em(40, var.$font-size-primary);
+	}
+}

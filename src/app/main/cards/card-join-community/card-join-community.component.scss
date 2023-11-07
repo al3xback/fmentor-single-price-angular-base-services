@@ -1,0 +1,34 @@
+@use '../../../../assets/scss/abstracts/variables' as var;
+@use '../../../../assets/scss/abstracts/functions' as func;
+@use '../../../../assets/scss/abstracts/mixins' as mix;
+
+:host {
+	@include mix.flexbox;
+	@include mix.flex-direction(column);
+	padding: func.em(26, var.$font-size-primary)
+		func.em(24, var.$font-size-primary);
+}
+
+h2.title {
+	margin-bottom: func.em(20, 20);
+}
+
+.mark {
+	margin-bottom: func.em(16, 15);
+	line-height: 1.3;
+}
+
+@media (min-width: 48em) {
+	:host {
+		padding: func.em(38, var.$font-size-primary)
+			func.em(40, var.$font-size-primary);
+	}
+
+	h2.title {
+		font-size: func.em(24, var.$font-size-primary);
+	}
+
+	.mark {
+		font-size: func.em(18, var.$font-size-primary);
+	}
+}

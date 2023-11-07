@@ -1,0 +1,51 @@
+@use '../../../../assets/scss/abstracts/variables' as var;
+@use '../../../../assets/scss/abstracts/functions' as func;
+@use '../../../../assets/scss/abstracts/mixins' as mix;
+
+:host {
+	@include mix.flexbox;
+	@include mix.flex-direction(column);
+	padding: func.em(26, var.$font-size-primary)
+		func.em(24, var.$font-size-primary);
+	background-color: var.$color-cyan;
+	color: var.$color-light-gray;
+}
+
+h3.title {
+	margin-bottom: func.em(18, 18);
+	color: inherit;
+}
+
+.price {
+	@include mix.flexbox;
+	@include mix.align-items(center);
+	margin-top: func.em(-6, var.$font-size-primary);
+	font-size: func.em(16, var.$font-size-primary);
+}
+
+.price .num {
+	margin-right: func.em(12, 31);
+	font-size: func.em(31, 16);
+	font-weight: var.$font-weight-700;
+}
+
+.price .label {
+	color: var.$color-lighter-gray;
+}
+
+.desc {
+	margin-bottom: func.em(28, 15);
+	font-size: func.em(15, var.$font-size-primary);
+}
+
+.btn {
+	font-size: func.em(16, var.$font-size-primary);
+}
+
+@media (min-width: 48em) {
+	:host {
+        width: 50%;
+		padding: func.em(38, var.$font-size-primary)
+			func.em(40, var.$font-size-primary);
+	}
+}
