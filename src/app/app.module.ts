@@ -15,11 +15,11 @@ import { FooterComponent } from './footer/footer.component';
 		AppComponent,
 		HeaderComponent,
 		MainComponent,
-		FooterComponent,
 		CardsComponent,
 		CardJoinCommunityComponent,
 		CardMonthlySubscriptionComponent,
-		CardWhyUsComponent
+		CardWhyUsComponent,
+		FooterComponent
 	],
 	imports: [BrowserModule],
 	providers: [],
