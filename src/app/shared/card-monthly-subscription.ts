@@ -1,5 +1,5 @@
 export interface CardMonthlySubscription {
 	title: string;
-	desc: string;
+	description: string;
 	price: number;
 }
