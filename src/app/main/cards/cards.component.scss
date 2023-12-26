@@ -6,9 +6,9 @@
 	@include mix.flexbox;
 	@include mix.flex-direction(column);
 	width: 100%;
+	background-color: var.$color-white;
 	margin: func.em(40, var.$font-size-primary) 0
 		func.em(60, var.$font-size-primary);
-	background-color: var.$color-white;
 	@include mix.border-radius(8px);
 	@include mix.box-shadow(
 		0 func.em(16, var.$font-size-primary)
