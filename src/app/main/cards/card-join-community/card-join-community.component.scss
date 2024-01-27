@@ -15,6 +15,10 @@ h2.title {
 
 .mark {
 	margin-bottom: func.em(16, 15);
+	background-color: transparent;
+	font-size: func.em(15, var.$font-size-primary);
+	font-weight: var.$font-weight-700;
+	color: var.$color-bright-yellow;
 	line-height: 1.3;
 }
 
