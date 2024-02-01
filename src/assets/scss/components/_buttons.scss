@@ -8,7 +8,7 @@
 	border: 1px solid transparent;
 	@include mix.user-select(none);
 	@include mix.border-radius(4px);
-	@include mix.box-shadow(0rem 0.5em 1.125em rgba(0, 0, 0, 0.2));
+	@include mix.box-shadow(0 8px 18px rgba(0, 0, 0, 0.2));
 	font-size: 1em;
 	text-decoration: none;
 	line-height: 1.24;

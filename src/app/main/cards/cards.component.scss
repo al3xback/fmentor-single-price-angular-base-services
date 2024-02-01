@@ -10,10 +10,7 @@
 	margin: func.em(40, var.$font-size-primary) 0
 		func.em(60, var.$font-size-primary);
 	@include mix.border-radius(8px);
-	@include mix.box-shadow(
-		0 func.em(16, var.$font-size-primary)
-			func.em(30, var.$font-size-primary) rgba(0, 0, 0, 0.04)
-	);
+	@include mix.box-shadow(0 16px 30px rgba(0, 0, 0, 0.04));
 	overflow: hidden;
 }
 
