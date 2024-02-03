@@ -4,20 +4,25 @@
 
 .btn {
 	@include mix.inline-flexbox;
-	padding: func.em(12, var.$font-size-primary);
+	@include mix.justify-content(center);
+	@include mix.align-items(center);
+	padding: 0;
+	background-color: transparent;
 	border: 1px solid transparent;
-	@include mix.user-select(none);
-	@include mix.border-radius(4px);
-	@include mix.box-shadow(0 8px 18px rgba(0, 0, 0, 0.2));
-	font-size: 1em;
+	color: inherit;
 	text-decoration: none;
+	text-align: center;
 	line-height: 1.24;
-	@include mix.transition(all 0.4s);
+	cursor: pointer;
+	@include mix.transition(all 0.15s ease-in-out);
 }
 
 .btn-primary {
+	padding: func.em(12, var.$font-size-primary);
 	background-color: var.$color-bright-yellow;
 	border-color: var.$color-bright-yellow;
+	@include mix.border-radius(4px);
+	@include mix.box-shadow(0 8px 18px rgba(0, 0, 0, 0.2));
 	color: var.$color-white;
 }
 
@@ -29,12 +34,10 @@
 }
 
 .btn-link {
-	padding: 0;
-	@include mix.box-shadow(none);
 	color: var.$color-cyan;
 }
 
 .btn-full {
 	@include mix.flexbox;
-	@include mix.justify-content(center);
+	width: 100%;
 }
