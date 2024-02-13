@@ -6,7 +6,9 @@
 	@include mix.flex(auto);
 }
 
-.container {
-	@include mix.justify-content(center);
-	@include mix.align-items(center);
+@media (min-width: 48em) {
+	.container {
+		@include mix.justify-content(center);
+		@include mix.align-items(center);
+	}
 }
